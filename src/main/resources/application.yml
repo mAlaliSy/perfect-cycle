@@ -1,0 +1,35 @@
+spring:
+  cloud:
+    function:
+      definition: checkPerfectCycle;logPerfectCycleResult
+
+    stream:
+      bindings:
+        checkPerfectCycle-in-0:
+          destination: check-perfect-cycle
+          binder: rabbit
+
+        checkPerfectCycle-out-0:
+          destination: perfect-cycle-result
+          binder: rabbit
+
+#       For demo purposes only
+        logPerfectCycleResult-in-0:
+          destination: perfect-cycle-result
+          binder: rabbit
+
+        perfectCycleRequestProducer-out-0:
+          destination: check-perfect-cycle
+          binder: rabbit
+
+      binders:
+        rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: ${RABBITMQ_HOST:localhost}
+                port: ${RABBITMQ_PORT:5672}
+                username: ${RABBITMQ_USERNAME:guest}
+                password: ${RABBITMQ_PASSWORD:guest}
+                virtual-host: /

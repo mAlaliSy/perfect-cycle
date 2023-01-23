@@ -1,0 +1,24 @@
+### This is a sample request -to publish requests to queue- that can be executed in IntelliJ
+
+POST http://localhost:8080/api/perfect-cycle/publish-request
+Content-Type: application/json
+
+{"id": "list1", "list": [1, 2, 3]}
+
+###
+POST http://localhost:8080/api/perfect-cycle/publish-request
+Content-Type: application/json
+
+{"id": "list2", "list": [0, 2, 5]}
+
+###
+POST http://localhost:8080/api/perfect-cycle/publish-request
+Content-Type: application/json
+
+{"id": "list3", "list": [3, 0, 1, 2]}
+
+###
+POST http://localhost:8080/api/perfect-cycle/publish-request
+Content-Type: application/json
+
+{"id": "listn", "list": []}
