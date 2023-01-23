@@ -1,9 +1,12 @@
-package dev.alali.perfectcycle.service;
+package dev.alali.perfectcycle.check;
+
+import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+@Component
 public class DefaultPerfectCycleChecker implements PerfectCycleChecker {
 
     @Override

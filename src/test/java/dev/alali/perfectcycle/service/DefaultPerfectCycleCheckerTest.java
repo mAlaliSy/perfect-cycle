@@ -1,5 +1,6 @@
 package dev.alali.perfectcycle.service;
 
+import dev.alali.perfectcycle.check.DefaultPerfectCycleChecker;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

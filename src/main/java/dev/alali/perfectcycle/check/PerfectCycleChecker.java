@@ -1,4 +1,4 @@
-package dev.alali.perfectcycle.service;
+package dev.alali.perfectcycle.check;
 
 import java.util.List;
 

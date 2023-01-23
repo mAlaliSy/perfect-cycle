@@ -1,0 +1,12 @@
+### This is a sample request that can be executed in IntelliJ
+POST http://localhost:8080/api/perfect-cycle/check
+Content-Type: application/json
+
+{
+  "lists": [
+    {"id": "list1", "list": [1, 2, 3]},
+    {"id": "list2", "list": [0, 2, 5]},
+    {"id": "list3", "list": [3, 0, 1, 2]},
+    {"id": "listn", "list": []}
+  ]
+}
